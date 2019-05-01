@@ -1,0 +1,124 @@
+
+
+        
+
+<ng-template #loading><h1 class="text-white">Loading Data...</h1></ng-template>
+
+        
+
+<div class="container" *ngIf="(events$ | async); let events; else loading"> 
+        <div class="display-2 text-center text-white m-3" id="logo">EDMBay</div>
+        <div *ngFor="let item of (events$ | async)">
+            <div class="row itemDisplay">  
+                 <div class="col-xs-4 ">
+                        <div>
+                         <div *ngIf="item.artistImg != null" >
+                                <img src="{{item.artistImg}}" alt=""  class="img-fluid" id="djimage">
+                         </div>  
+    
+                         <div *ngIf="item.artistImg == null" >
+                                <img src="../../assets/music-player.png" alt="" class="img-fluid" alt="Responsive image" id="djimage">
+                            </div>  
+    
+    
+    
+                        </div>
+                </div>
+                <div class="col-xs-6 ml-1">
+                    <div class="d-flex">
+                            <div class="align-self-center">
+                                 <h3 class=" align-self-end">{{item.fullEventName| titlecase }}</h3>
+
+                            </div>
+
+
+                    </div>
+                    <div class="d-flex">
+
+                            <h5 class=" align-self-end">{{item.venueName| titlecase }}</h5>
+
+                    </div>
+                    <div class="d-sm-block col-xs-2">
+                            <div class="d-flex">   
+                                        <a class="btn btn-success" data-toggle="collapse" href="#collapse-btn-{{item.id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                                        More Info
+                                        </a>
+        
+                            </div>
+                     </div>
+
+                <div class="itemDisplayabs text-center d-none d-sm-block">
+                        <div class="d-flex flex-column">
+                                <div class="p-1">{{item.startDate |  date:'E' }}</div>
+                                <div class="p-1">{{item.startDate |  date:'MMM  dd' }}</div>
+
+                        </div>
+                </div>
+
+        </div>
+                
+    
+    
+            </div>
+            
+            <div id="event-content">
+                    <div class="collapse" id="collapse-btn-{{item.id}}">
+
+
+                                                    <div class="mx-auto w-90 p-3 bg-dark  text-center">
+                                                                <h1 class="text-white">{{item.fullEventName | titlecase }}</h1>
+
+                                                                <div class="row justify-content-center">
+                                                                                <div class="d-md-none">                                                                               
+                                                                                         <img src="{{item.image}}" alt=""  class="img-fluid" id="eventPosterSmall">
+                                                                                </div>
+                                                                                <div class="d-none d-md-block">                                                                               
+                                                                                                <img src="{{item.image}}" alt=""  class="img-fluid" id="eventPoster">
+                                                                                       </div>
+
+                
+                                                                </div>
+                                                                
+
+                                                                <div class="d-inline-flex p-2">
+                                                                                <a name="" id="" class="btn btn-success m-1 px-5" href="{{item.url}}" role="button" target="_black">Ticket</a>
+                                                                                <a name="" id="" class="btn btn-success m-1 px-5" href="https://www.google.com/maps?q={{item.venueAddress}}" role="button" target="_black">Venue Map</a>
+                
+                                                                </div>
+
+
+                                                                <div *ngIf="item.artistsData != null" >
+                                                                                <div *ngFor="let artist of item.artistsData">
+
+                                                                                <div class="d-inline-flex p-2">
+                                                                                                <a name="" id="musiclink" class="px-5" href="{{artist.spotify}}" role="button" target="_black">
+                                                                                                                <i class="fab fa-spotify fa-3x"></i>
+                
+                                                                                                </a>
+                                                                                                <a name="" id="musiclink" class="px-5" href="{{artist.soundcloud}}" role="button" target="_black">
+                                                                                                                <i class="fab fab fa-soundcloud fa-3x"></i>
+                
+                                                                                                </a>
+
+
+
+
+                
+                                                                                </div>
+
+                                                                        </div>
+                                                                </div>  
+
+    
+
+                                                    </div>
+
+
+
+
+                    </div>
+            </div>    
+    
+        </div>
+    
+</div>

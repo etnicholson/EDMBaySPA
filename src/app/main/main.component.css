@@ -1,0 +1,85 @@
+
+#logo{
+    font-family: 'Dancing Script', cursive;
+
+}
+
+.itemDisplay{
+
+    border: solid rgb(48, 6, 6);
+    background: grey;
+    color: whitesmoke;
+    font-family: 'Cormorant Unicase', serif;
+    position: relative;
+
+
+
+}
+.itemDisplayabs{
+
+    position: absolute;
+    border: 1px solid whitesmoke;
+    right: 45px;
+    top:25px;
+    border-radius: 15px;
+    background-color: black;
+    opacity: 0.5;
+
+}
+
+#djimage{
+
+    max-width: 120px;
+    max-height: 120px;
+
+    min-width: 120px;
+    min-height: 120px;
+}
+
+
+.btn-success{
+     background-color: black;
+     color:  grey;
+     border-color: antiquewhite;
+     font-size: 1.2rem;
+     font-family: serif;
+
+}
+
+.btn-success:hover{
+    color:   rgb(120, 6, 6)
+
+}
+
+
+
+#event-content{
+
+    font-family: 'Dancing Script', serif;
+}
+
+
+#musiclink{
+    color:black;
+
+}
+#musiclink:hover{
+    color:   rgb(120, 6, 6)
+
+}
+/*
+
+font-family: 'Dancing Script', cursive;
+Cormorant Unicase
+*/
+
+
+
+
+#eventPoster{
+
+    max-width:  600px;
+    max-height:  420px;
+
+
+}
