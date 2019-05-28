@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class MainComponent implements OnInit {
 
-
+  term: string;
 
   events$: Observable<EventsDto[]>;
 

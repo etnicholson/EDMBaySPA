@@ -6,8 +6,22 @@
 <ng-template #loading><h1 class="text-white">Loading Data...</h1></ng-template>
 
 <div class="container" *ngIf="events$ | async; let events; else: loading" style="margin-top: 58px;">
+  
+  <div class="d-flex " id="search">
 
-  <div *ngFor="let item of events$ | async">
+    <div class="p-1 flex-shrink-1" >
+      <i class="fab fa-searchengin  fa-2x"></i>
+    </div>
+    <div class="p-1 w-100 ">
+      <input type="text" [(ngModel)]="term" placeholder="Search events by artist and venue">
+    </div>
+  </div>
+
+  
+
+
+
+  <div *ngFor="let item of events$ | async | filter:term">
 
     <div class="row" [ngClass]="(item.feature == true) ? 'itemDisplayf':'itemDisplay'">
       <div class="col-xs-4 ">
