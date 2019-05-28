@@ -11,9 +11,6 @@ import { Observable } from 'rxjs';
 export class MainComponent implements OnInit {
 
 
-  events: EventsDto[];
-  previous: Date;
-
 
   events$: Observable<EventsDto[]>;
 
