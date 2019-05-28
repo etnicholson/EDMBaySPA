@@ -1,16 +1,33 @@
 
 #logo{
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Oxygen', sans-serif;
+    background: rgb(0, 0, 0);
+    margin: 0px;
 
 }
 
+
+
+
 .itemDisplay{
 
-    border: solid rgb(48, 6, 6);
-    background: grey;
+    border-bottom: solid .1px grey;
+    background: #282828;
     color: whitesmoke;
-    font-family: 'Cormorant Unicase', serif;
+    font-family: 'Oxygen', sans-serif;
     position: relative;
+    font-weight: 400;
+    margin-top: 20px;
+
+}
+
+.itemDisplayf{
+
+  border: solid rgb(214, 27, 52);
+  background:rgb(48, 47, 47);;
+  color: whitesmoke;
+  font-family: 'Oxygen', sans-serif;
+  position: relative;
 
 
 
@@ -47,6 +64,8 @@
 
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
+   border: solid 1px grey;
+
     max-width: 120px;
     max-height: 120px;
 
@@ -57,10 +76,12 @@
 
 .btn-success{
      background-color: black;
-     color:  grey;
-     border-color: antiquewhite;
-     font-size: 1.2rem;
-     font-family: serif;
+     color:  white;
+     border: 0px;
+
+     font-size: 1rem;
+     font-family: Arial, Helvetica, sans-serif;
+
 
 }
 

@@ -1,9 +1,15 @@
+
+<app-navbar></app-navbar>
+
+
+
 <ng-template #loading><h1 class="text-white">Loading Data...</h1></ng-template>
 
-<div class="container" *ngIf="events$ | async; let events; else: loading">
-  <div class="display-2 text-center text-white m-3" id="logo">EDMBay</div>
+<div class="container" *ngIf="events$ | async; let events; else: loading" style="margin-top: 58px;">
+
   <div *ngFor="let item of events$ | async">
-    <div class="row itemDisplay">
+
+    <div class="row" [ngClass]="(item.feature == true) ? 'itemDisplayf':'itemDisplay'">
       <div class="col-xs-4 ">
         <div>
           <div *ngIf="item.artistImg != null">
@@ -26,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xs-6 ml-1">
+      <div class="col-xs-6 ml-3">
         <div class="d-flex">
           <div class="align-self-center">
             <h3 class=" align-self-end">
@@ -35,7 +41,7 @@
           </div>
         </div>
         <div class="d-flex">
-          <h5 class=" align-self-end ">{{ item.venueName | titlecase }}</h5>
+          <h5 class=" align-self-end " style="    font-weight: 300;">{{ item.venueName | titlecase }}</h5>
         </div>
         <div class="d-sm-block col-xs-2">
           <div class="d-flex">
@@ -47,7 +53,9 @@
               aria-expanded="false"
               aria-controls="collapseExample"
             >
-              More Info
+            More Info
+            <i class="fas fa-plus"></i>
+
             </a>
           </div>
         </div>

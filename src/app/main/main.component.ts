@@ -13,17 +13,15 @@ export class MainComponent implements OnInit {
 
   events: EventsDto[];
   previous: Date;
-  featureDate: Date;
+
 
   events$: Observable<EventsDto[]>;
 
   constructor(private data: DataRetriverService) { }
 
   ngOnInit() {
-    this.featureDate = new Date();
-    this.featureDate.setDate(this.featureDate.getDate() - 5);
-    console.log(this.featureDate);
     this.events$ = this.data.getEvents();
+
 
   }
 

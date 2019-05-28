@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { DataRetriverService } from './_services/data-retriver.service';
 import { MainComponent } from './main/main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      MainComponent
+      MainComponent,
+      NavbarComponent
    ],
    imports: [
       BrowserModule,

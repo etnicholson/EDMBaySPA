@@ -6,6 +6,8 @@ export class EventsDto {
     artistImg: string;
 // tslint:disable-next-line: variable-name
     startDate: Date;
+    timeApproved: Date;
+    feature: boolean;
     image: string;
     url: string;
     venueName: string;
